@@ -169,7 +169,7 @@ body {
 
 /* Home Page Specifics - Updated for social icons LEFT placement */
 #homePage {
-    background-image: url('https://placehold.co/1200x800/212121/FFFFFF?text=Travel+Background'); /* Darker background to fit theme */
+    background-image: url('travel_bg.svg'); /* Darker background to fit theme */
     background-size: cover;
     background-position: center;
     color: #ffffff;
