@@ -1,0 +1,483 @@
+/* Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: #E0F7FA; /* Very light sky blue background for the entire page */
+    color: #333; /* Default text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #000000; /* Pure Black */
+    color: #ecf0f1; /* Light text */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow for black bar */
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ecf0f1; /* Light text on black */
+}
+
+.navbar .logo i {
+    margin-right: 10px;
+    color: #00BCD4; /* Sky Blue accent for logo icon */
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.navbar nav ul li {
+    margin-left: 25px;
+}
+
+.navbar nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 5px 0;
+    position: relative;
+    border-radius: 5px;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+    color: #00BCD4; /* Sky Blue on hover/active */
+    transform: translateY(-2px);
+}
+
+.navbar nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #00BCD4; /* Sky Blue accent */
+    border-radius: 2px;
+}
+
+
+/* Search Section */
+.search-section {
+    display: flex;
+    align-items: center;
+}
+
+#searchInput {
+    padding: 0.6rem 1rem;
+    border: 1px solid #555; /* Darker border */
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 250px;
+    margin-right: 10px;
+    background-color: #fdfefe;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+#searchInput::placeholder {
+    color: #95a5a6;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #8BC34A; /* Leaf Green focus */
+    box-shadow: 0 0 0 3px rgba(139, 195, 74, 0.3);
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    background-color: #8BC34A; /* Leaf Green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #7CB342; /* Darker Leaf Green */
+    transform: translateY(-1px);
+}
+
+#resetBtn {
+    background-color: #00BCD4; /* Sky Blue for Reset */
+    margin-left: 10px;
+}
+
+#resetBtn:hover {
+    background-color: #00ACC1; /* Darker Sky Blue */
+}
+
+/* Main Content Area */
+.content-area {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #FFFFFF; /* White content area */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Page Section Management */
+.page-section {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    z-index: 1;
+    overflow-y: auto;
+}
+
+.page-section.active {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 2;
+    position: relative;
+}
+
+/* Home Page Specifics - Updated for social icons LEFT placement */
+#homePage {
+    background-image: url('https://placehold.co/1200x800/212121/FFFFFF?text=Travel+Background'); /* Darker background to fit theme */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    min-height: 400px;
+    border-radius: 8px;
+}
+
+.home-page-content-wrapper { /* NEW Wrapper for intro text and social icons */
+    display: flex;
+    flex-direction: row; /* Arrange children horizontally */
+    justify-content: flex-start; /* Aligns items to the start (left) */
+    align-items: flex-end; /* Aligns them at the bottom of their container */
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    gap: 20px; /* Space between intro and icons */
+}
+
+.social-icons { /* Adjusted for vertical stacking and LEFT alignment */
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    align-items: flex-start; /* Align icons to the LEFT within their container */
+    justify-content: flex-end; /* Push icons to the bottom if container allows */
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+
+.social-icons a {
+    color: #00BCD4; /* Sky Blue icons */
+    font-size: 2rem;
+    margin: 10px 0; /* Vertical margin between icons */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #8BC34A; /* Leaf Green on hover */
+    transform: scale(1.2);
+}
+
+.home-intro {
+    flex-grow: 1;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly darker overlay for text readability */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    color: #ecf0f1; /* Ensure text is light */
+}
+
+.home-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+}
+
+.home-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    color: #bdc3c7;
+}
+
+
+/* Recommendation Results Section */
+.recommendation-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque white for results */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.recommendation-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.recommendation-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.recommendation-card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.recommendation-card h3 {
+    font-size: 1.5rem;
+    color: #333; /* Dark text on white card */
+    margin-bottom: 10px;
+}
+
+.recommendation-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.time-display {
+    font-size: 0.85rem;
+    color: #777; /* Slightly darker grey for time */
+    margin-top: auto;
+}
+
+
+/* About Us & Contact Us Styling */
+.about-us-content,
+.contact-us-content {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333; /* Dark text for headings */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-us-content p,
+.contact-us-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    font-size: 1.7rem;
+    color: #00BCD4; /* Sky Blue for sub-headings */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.team-member {
+    background-color: #F7FFF7; /* Very light green/off-white for team cards */
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member h4 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #F7FFF7; /* Very light green/off-white for form background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #8BC34A; /* Leaf Green focus */
+    box-shadow: 0 0 0 3px rgba(139, 195, 74, 0.2);
+}
+
+.contact-form .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #00BCD4; /* Sky Blue for submit */
+}
+
+.contact-form .btn:hover {
+    background-color: #00ACC1; /* Darker Sky Blue */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    .navbar nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .navbar nav ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .navbar nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+    .search-section {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+    #searchInput {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .btn {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-bottom: 10px;
+    }
+    /* Home page content wrapper for mobile */
+    .home-page-content-wrapper {
+        flex-direction: column; /* Stack intro and icons vertically */
+        align-items: center; /* Center them */
+        margin-bottom: 20px;
+    }
+    .social-icons { /* Re-adjust for horizontal display on mobile */
+        flex-direction: row; /* Icons side-by-side on mobile */
+        justify-content: center; /* Center icons horizontally */
+        width: 100%;
+        margin-bottom: 20px; /* Space between icons and intro */
+        padding-bottom: 0; /* Remove padding if added for vertical alignment */
+    }
+    .social-icons a {
+        margin: 0 10px; /* Horizontal margin between icons on mobile */
+    }
+    .home-intro {
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+    }
+    .recommendation-card {
+        width: 100%;
+    }
+    .team-member {
+        width: 100%;
+    }
+}

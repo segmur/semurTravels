@@ -1,0 +1,99 @@
+{
+    "countries": [
+      {
+        "id": 1,
+        "name": "Brazil",
+        "cities": [
+          {
+            "name": "Rio de Janeiro",
+            "description": "Rio de Janeiro is a vibrant city known for its stunning beaches, carnival, and iconic landmarks like Christ the Redeemer.",
+            "imageUrl": "https://placehold.co/600x400/98C1D9/FFFFFF?text=Rio+de+Janeiro",
+            "timezones": ["America/Sao_Paulo"]
+          },
+          {
+            "name": "São Paulo",
+            "description": "São Paulo is a sprawling metropolis, a financial hub with a rich cultural scene, diverse cuisine, and vibrant nightlife.",
+            "imageUrl": "https://placehold.co/600x400/8D99AE/FFFFFF?text=Sao+Paulo",
+            "timezones": ["America/Sao_Paulo"]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Japan",
+        "cities": [
+          {
+            "name": "Tokyo",
+            "description": "Tokyo, Japan’s bustling capital, is a blend of traditional culture and futuristic technology, offering diverse experiences.",
+            "imageUrl": "https://placehold.co/600x400/E0FBFC/000000?text=Tokyo",
+            "timezones": ["Asia/Tokyo"]
+          },
+          {
+            "name": "Kyoto",
+            "description": "Kyoto, Japan’s ancient capital, is famous for its classical Buddhist temples, gardens, imperial palaces, and traditional wooden houses.",
+            "imageUrl": "https://placehold.co/600x400/C2DFEA/000000?text=Kyoto",
+            "timezones": ["Asia/Tokyo"]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Australia",
+        "cities": [
+          {
+            "name": "Sydney",
+            "description": "Sydney is a major Australian city known for its harbourfront Opera House, Bridge, and extensive beaches.",
+            "imageUrl": "https://placehold.co/600x400/B2D7E0/000000?text=Sydney",
+            "timezones": ["Australia/Sydney"]
+          },
+          {
+            "name": "Melbourne",
+            "description": "Melbourne is the coastal capital of the southeastern Australian state of Victoria. It is known for its arts, fashion, and culinary scene.",
+            "imageUrl": "https://placehold.co/600x400/9AD0DB/000000?text=Melbourne",
+            "timezones": ["Australia/Melbourne"]
+          }
+        ]
+      }
+    ],
+    "temples": [
+      {
+        "id": 1,
+        "name": "Angkor Wat",
+        "description": "Angkor Wat is a vast stone temple complex in Cambodia built in the 12th century, known for its intricate Khmer architecture.",
+        "imageUrl": "https://placehold.co/600x400/F0F3BD/000000?text=Angkor+Wat"
+      },
+      {
+        "id": 2,
+        "name": "Borobudur Temple",
+        "description": "Borobudur is a 9th-century Mahayana Buddhist temple in Central Java, Indonesia, and the world's largest Buddhist temple.",
+        "imageUrl": "https://placehold.co/600x400/A7DBD8/000000?text=Borobudur"
+      },
+      {
+        "id": 3,
+        "name": "Kinkaku-ji",
+        "description": "Kinkaku-ji, or the Golden Pavilion, is a Zen Buddhist temple in Kyoto, Japan, entirely covered in gold leaf.",
+        "imageUrl": "https://placehold.co/600x400/DAEDF4/000000?text=Kinkaku-ji"
+      }
+    ],
+    "beaches": [
+      {
+        "id": 1,
+        "name": "Bora Bora",
+        "description": "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia, famous for its luxury resorts and turquoise lagoons.",
+        "imageUrl": "https://placehold.co/600x400/98C1D9/FFFFFF?text=Bora+Bora"
+      },
+      {
+        "id": 2,
+        "name": "Maldives",
+        "description": "The Maldives is a tropical nation in the Indian Ocean known for its luxury resorts, white sand beaches, and extensive reefs.",
+        "imageUrl": "https://placehold.co/600x400/3D5A80/FFFFFF?text=Maldives"
+      },
+      {
+        "id": 3,
+        "name": "Copacabana Beach",
+        "description": "Copacabana Beach is a world-famous beach in Rio de Janeiro, Brazil, known for its vibrant atmosphere and scenic beauty.",
+        "imageUrl": "https://placehold.co/600x400/40B5AD/FFFFFF?text=Copacabana"
+      }
+    ]
+  }
+  

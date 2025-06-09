@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Buddy</title>
+    <link rel="stylesheet" href="travel_style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <i class="fas fa-plane"></i>
+            <span>Travel Buddy</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" id="homeLink" class="nav-link active">Home</a></li>
+                <li><a href="#about" id="aboutLink" class="nav-link">About Us</a></li>
+                <li><a href="#contact" id="contactLink" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Search for beaches, temples, countries...">
+            <button id="searchBtn" class="btn">Search</button>
+            <button id="resetBtn" class="btn">Clear</button>
+        </div>
+    </header>
+
+    <main class="content-area">
+        <!-- Home Page Section -->
+        <section id="homePage" class="page-section active">
+            <div class="home-page-content-wrapper">
+                <div class="social-icons"> <!-- NOW FIRST FOR LEFT PLACEMENT -->
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="home-intro">
+                    <h2>Your Next Adventure Awaits!</h2>
+                    <p>
+                        Explore breathtaking destinations, ancient temples, and serene beaches with Travel Buddy.
+                        Let us guide you to your perfect getaway. Use the search bar above to find recommendations!
+                    </p>
+                </div>
+            </div>
+            <div id="recommendationResults" class="recommendation-results">
+                <!-- Recommendations will be displayed here dynamically -->
+            </div>
+        </section>
+
+        <!-- About Us Page Section -->
+        <section id="aboutPage" class="page-section">
+            <div class="about-us-content">
+                <h2>About Travel Buddy</h2>
+                <p>
+                    Travel Buddy is dedicated to helping you discover the world's most amazing places.
+                    Our mission is to provide personalized and accurate travel recommendations to make
+                    your journey unforgettable. We believe that every trip should be an adventure tailored to your dreams.
+                </p>
+                <h3>Our Team</h3>
+                <div class="team-members">
+                    <div class="team-member">
+                        <h4>Alice Wonderland</h4>
+                        <p>Founder & CEO</p>
+                        <p>Alice envisioned Travel Buddy as a platform to connect travelers with their ideal destinations, bringing her passion for exploration and technology together.</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>Bob The Builder</h4>
+                        <p>Head of Recommendations</p>
+                        <p>With years of experience traversing the globe, Bob curates the most authentic and exciting travel spots, ensuring every recommendation is a gem.</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>Charlie Chaplin</h4>
+                        <p>Customer Experience Lead</p>
+                        <p>Charlie ensures that your journey with Travel Buddy is seamless from planning to execution, always putting your needs first.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Page Section -->
+        <section id="contactPage" class="page-section">
+            <div class="contact-us-content">
+                <h2>Contact Us</h2>
+                <p>Have a question or a suggestion? We'd love to hear from you!</p>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>
